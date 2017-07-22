@@ -2033,7 +2033,7 @@ typedef struct {
  */
 
 /** ADC - Peripheral register structure */
-typedef struct ADC_MemMap {
+typedef struct {
   uint32_t HC[2];                                  /**< Control register for hardware triggers, array offset: 0x0, array step: 0x4 */
   uint32_t HS;                                     /**< Status register for HW triggers, offset: 0x8 */
   uint32_t R[2];                                   /**< Data result register for HW triggers, array offset: 0xC, array step: 0x4 */
@@ -2045,7 +2045,7 @@ typedef struct ADC_MemMap {
   uint32_t CAL;                                    /**< Calibration value register, offset: 0x28 */
   uint8_t RESERVED_0[4];
   uint32_t PCTL;                                   /**< Pin control register, offset: 0x30 */
-} volatile *ADC_MemMapPtr;
+} ADC_Type, *ADC_MemMapPtr;
 
 /* ----------------------------------------------------------------------------
    -- ADC - Register accessor macros
